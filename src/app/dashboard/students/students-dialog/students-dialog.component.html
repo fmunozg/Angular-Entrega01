@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>
+    {{dialogTitle}}
+</h1>
+<div>
+  <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+    <div class="row" style="text-align: center;">
+        <div class="col">
+            <input formControlName="nombre" placeholder="Nombre" aria-label="Nombre"/>
+        </div>
+        <div class="col">
+            <input formControlName="apellido" placeholder="Apellido" aria-label="Apellido"/>
+        </div>
+        <div class="col">
+            <input formControlName="curso" placeholder="Curso" aria-label="Curso" />
+        </div>
+    </div>
+
+    <div mat-dialog-actions>
+      <button mat-button type="button" (click)="onCancel()">Cancelar</button>
+      <button mat-button type="submit" [disabled]="studentForm.invalid">Guardar</button>
+    </div>
+  </form>
+</div>
+
