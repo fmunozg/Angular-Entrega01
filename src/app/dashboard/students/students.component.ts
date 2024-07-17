@@ -5,13 +5,14 @@ import { SharedModule } from '../../shared/shared.module';
 import {MatIconModule} from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog';
 import { StudentsDialogComponent } from './students-dialog/students-dialog.component';
+import {MatButtonModule} from '@angular/material/button';
 
 
 
 @Component({
   selector: 'app-students',
   standalone: true,
-  imports: [MatTableModule,SharedModule,MatIconModule,StudentsDialogComponent],
+  imports: [MatTableModule,SharedModule,MatIconModule,StudentsDialogComponent,MatButtonModule],
   templateUrl: './students.component.html',
   styleUrl: './students.component.scss'
 })

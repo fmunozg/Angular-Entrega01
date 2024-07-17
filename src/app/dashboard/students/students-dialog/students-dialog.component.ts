@@ -3,12 +3,14 @@ import {MAT_DIALOG_DATA, MatDialogModule, MatDialogRef} from '@angular/material/
 import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import { student } from '../models';
 import { MatError, MatFormField, MatLabel } from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+
 
 
 @Component({
   selector: 'app-students-dialog',
   standalone: true,
-  imports: [MatDialogModule,MatFormField,MatLabel,MatError,ReactiveFormsModule],
+  imports: [MatDialogModule,MatFormField,MatLabel,MatError,ReactiveFormsModule,MatButtonModule],
   templateUrl: './students-dialog.component.html',
   styleUrl: './students-dialog.component.scss'
 })
